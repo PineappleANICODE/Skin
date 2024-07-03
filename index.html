@@ -1,1 +1,222 @@
-<h1>I would like your skin :3</h1>
+
+
+
+<div id="replace-layer">
+</div>
+
+<div id="container">
+</div>
+
+<div id="container2">
+<img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExd3Bkc3JqaHN5cDRhdmQ5eHZna3c3azRla3IyOGFsb2szcGF1bHNoeSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/JRa0YJDJo48kHlIFAW/giphy.webp" title="help me" alt="help me" style="width: 300px; transform: rotate(180deg); " onclick="toggleImage();"/>
+
+<div id="bubble">
+<h1>
+THIS IS A HUMAN WEBSITE
+<h2>
+RUN BY HUMANS
+</h2>
+</h1>
+</div>
+
+<div id="bubble2">
+<h1>
+THIS IS A HUMAN WEBSITE
+<h2>
+RUN BY HUMANS
+</h2>
+</h1>
+</div>
+
+
+<div id="text2">
+<h2>
+WE DO NOT WANT YOUR SKIN
+</h2>
+<h3>
+ignore the URL
+</h3>
+</div>
+
+
+<img src="https://i.imgur.com/BG5n6TO.png" style="  position: absolute; height: 150px; top:200px; left: 200px;" id="lovingit" onclick="toggleImage();"/>
+
+
+
+</div>
+
+
+<div id="text">
+<img src="https://i.imgur.com/y7OvCKU.gif">
+<img src="https://i.imgur.com/y7OvCKU.gif" style="right:0; transform: scaleX(-1);z-index: 9;left:0;" >
+</div>
+
+
+<script>
+
+function toggleImage() {
+ var img1 = "https://i.imgur.com/BG5n6TO.png";
+ var img2 = "https://i.imgur.com/sxGFnSv.png";
+   var imgElement = document.getElementById('lovingit');
+
+   imgElement.src = (imgElement.src === img1)? img2 : img1;
+}
+
+
+var text = document.getElementById("text");
+
+window.addEventListener("scroll", function () {
+
+if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300 && document.body.scrollTop < 1000) {
+
+    myFunc();
+   }
+
+if (document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000) {
+				document.getElementById("replace-layer").style.opacity= 1; 
+        document.getElementById("replace-layer").style.height= 3000 + "px"; 
+	}
+  
+}, false);
+
+
+function myFunc() {
+    var offset= window.pageYOffset-300;
+    
+    if (document.getElementById("text").style.opacity < 1 && document.getElementById("container").style.opacity < 1){
+    
+    	document.getElementById("text").style.opacity= offset/1000; 
+    	document.getElementById("container").style.opacity= 1-offset/1000; 
+     
+}
+}
+</script>
+
+<style>
+body {
+  background-image: url("https://i.imgur.com/mTLLrDh.jpeg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  margin: 0;
+}
+
+#header{
+  background-color: #1e0f00;
+  top: 0;
+  height: 100px;
+  margin-top: 0;
+  position: absolute;
+  width: 100%;
+  z-index: 100;
+  filter: drop-shadow(5px 10px 20px #8d5524);
+}
+
+
+.hed{
+  font-family: serif;
+  text-align: center;
+  color: white;
+}
+
+#container{
+  background-color: rgba(255, 255, 255, 1);
+  top: 0;
+  height: 2000px;
+  opacity: 1;
+  
+}
+
+#container2{
+  background-color: white;
+  height: 327px;
+  opacity: 1;
+  z-index: 98;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  
+}
+
+
+#text{
+   position: fixed;
+   top: 20;
+   top: 150px;
+   opacity: 0;
+}
+
+
+#text2{
+  font-family: serif;
+   position: absolute;
+   top: 10px;
+   text-align: center;
+   width: 150px;
+   height: 900px;
+   right: 0;
+   background-image: url(https://i.imgur.com/8VYyrly.png);
+     background-repeat: no-repeat;
+  background-size: 300%;
+   filter: drop-shadow(10px 10px 10px #e0ac69);
+   
+}
+
+#text2 h2{
+  font-family: serif;
+animation: blinker 1s linear infinite;
+color: red;
+   
+}
+
+@keyframes blinker {
+  50% {
+    color: blue;
+  }
+}
+
+
+#bubble{
+  font-family: serif;
+   position: absolute;
+   top: 20px;
+   text-align: center;
+   width: 50%;
+   height: 50%;
+   right: 20%;
+   background-image: url(https://i.imgur.com/g9FHnD3.png);
+     background-repeat: no-repeat;
+  background-size: 200% 200%;
+   
+   filter: drop-shadow(10px 10px 10px #e0ac69);
+   
+}
+
+#bubble2{
+  font-family: serif;
+   position: absolute;
+   top: 200px;
+   text-align: center;
+   width: 60%;
+   height: 100%;
+   right: 320px;
+   background-image: url(https://i.imgur.com/g9FHnD3.png);
+     background-repeat: no-repeat;
+  background-size: 200% 200%;
+   
+   filter: drop-shadow(10px 10px 10px #e0ac69);
+   
+}
+
+
+#replace-layer{
+  background-color: rgba(000, 000, 000);
+  top: 0;
+  height: 0px;
+  opacity: 0;
+  z-index: 200;
+  position: absolute;
+  width: 100%;
+  
+}
+
+</style>
