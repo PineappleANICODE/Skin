@@ -67,9 +67,12 @@ function toggleImage() {
  var img2 = "hedoesntloveit.png";
    var imgElement = document.getElementById('lovingit');
 
-   imgElement.src = (imgElement.src === img1)? img2 : img1;
+   if(imgElement.src ==img1){
+	   imgElement.src=img2;
+}else{
+imgElement.src=img1;
+   }
 }
-
 
 var text = document.getElementById("text");
 
@@ -170,7 +173,7 @@ body {
 }
 
 #container{
-  background: url(brokenbg.png);
+  background: url(brokenbg.jpg);
    background-size: 200%;
   top: 0;
   height: 2000px;
@@ -179,7 +182,7 @@ body {
 }
 
 #container2{
-  background: url(brokenbg.png);
+  background: url(brokenbg.jpg);
        background-repeat: no-repeat;
   height: 327px;
   opacity: 1;
