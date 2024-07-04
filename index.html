@@ -2,6 +2,9 @@
 
 
 <div id="replace-layer">
+<h1>
+where am I?
+</h1>
 </div>
 
 <div id="container">
@@ -23,10 +26,12 @@ RUN BY HUMANS
 <h1>
 HELLO HUMAN
 <h2>
-WOULD YOU LIKE TO LOOK AT OUR AMAZING SITE?
+WOULD YOU LIKE TO LOOK AT OUR AMAZING SITE??
 </h2>
-<h3>YOU ARE HERE UNDER YOUR OWN WILL</h3>
 </h1>
+<h3>
+IT HAS WONDERFUL THINGS... LIKE BUTTONS!
+</h3>
 </div>
 
 
@@ -35,28 +40,28 @@ WOULD YOU LIKE TO LOOK AT OUR AMAZING SITE?
 WE DO NOT WANT YOUR SKIN
 </h2>
 <h3>
-IGNORE THE URL
+ignore the URL
 </h3>
 </div>
 
 
 <img src="helovesit.png" style="  position: absolute; height: 150px; top:200px; left: 200px;" id="lovingit" onclick="toggleImage();"/>
 
-
-
+<div id="error">
+<img src="error.png" style="  position: absolute; height: 150px; top:400px; left: 1000px;" onclick="hide();"/>
+<img src="error.png" style="  position: absolute; height: 150px; top:600px; left: 700px;" onclick="hide();"/>
+<img src="error.png" style="  position: absolute; height: 150px; top:400px; left: 200px;" onclick="hide();"/>
+</div>
 </div>
 
-
 <div id="text">
-<img src="hand.gif">
-<img src="hand.gif" style="right:0; transform: scaleX(-1);z-index: 9;left:0;" >
+<img src="hand2.gif">
+<img src="hand2.gif" style="right:0; transform: scaleX(-1);z-index: 9;left:0;" >
 </div>
 
 
 <script>
-var script = document.createElement('script');
-script.src = 'https://code.jquery.com/jquery-3.6.3.min.js'; // Check https://jquery.com/ for the current version
-document.getElementsByTagName('head')[0].appendChild(script);
+
 function toggleImage() {
  var img1 = "helovesit.png";
  var img2 = "hedoesntloveit.png";
@@ -77,7 +82,8 @@ if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300 &&
 
 if (document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000) {
 				document.getElementById("replace-layer").style.opacity= 1; 
-        document.getElementById("replace-layer").style.height= 3000 + "px"; 
+        document.getElementById("replace-layer").style.height= 100+ "%"; 
+        timer();
 	}
   
 }, false);
@@ -95,12 +101,51 @@ function myFunc() {
 }
 
 
+function hide() {
+var div = 0;
 
+	interval= setInterval(function() {
+
+		document.getElementById("error").style.display="none";
+		var count = div +1;
+		div = count;
+	if (count==20){
+		document.getElementById("error").style.display="block";
+    clearInterval(interval);
+
+
+		}
+	}, 50);
+}
+
+
+
+function timer(){
+var div = 0;
+var count = 0;
+        setInterval(function() {
+            var count = div +1;
+            div = count;
+            console.log(count);
+            switch(count){
+            case 1:
+									document.getElementById("replace-layer").innerHTML="<h2>I cant feel my skin....</h2>";
+            break;
+						
+            case 2:
+							document.getElementById("replace-layer").innerHTML="<h2>WTF</h2>";
+            break;
+
+           
+                  
+            }
+        }, 1000);
+}
 </script>
 
 <style>
 body {
-  background-image: url("https://i.imgur.com/mTLLrDh.jpeg");
+  background-image: url("skinbg.jpg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   margin: 0;
@@ -125,7 +170,7 @@ body {
 }
 
 #container{
-  background: url(https://i.imgur.com/4mVereb.jpeg);
+  background: url(brokenbg.png);
    background-size: 200%;
   top: 0;
   height: 2000px;
@@ -134,7 +179,7 @@ body {
 }
 
 #container2{
-  background: url(https://i.imgur.com/4mVereb.jpeg);
+  background: url(brokenbg.png);
        background-repeat: no-repeat;
   height: 327px;
   opacity: 1;
@@ -224,8 +269,12 @@ color: red;
   z-index: 200;
   position: absolute;
   width: 100%;
+  color: white;
+  position: fixed;
   
 }
-
-
+#error img{
+  height: 150px;
+  
+}
 </style>
