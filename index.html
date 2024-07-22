@@ -1,11 +1,24 @@
 <title>Skin :3</title>
 
 
-<div id="replace-layer">
-<h1>
-where am I?
-</h1>
-</div>
+  <div id="replace-layer" onclick="toggleVideo()">
+
+    <iframe frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" src="https://www.youtube.com/embed/yx0nIsPZmC4
+?playlist=yx0nIsPZmC4
+&amp;playsinline=1
+&amp;autoplay=1
+&amp;loop=1
+&amp;mute=1
+&amp;rel=0
+&amp;controls=0
+&amp;fs=0
+&amp;color=white
+&amp;disablekb=1
+&amp;enablejsapi=1
+&amp;iv_load_policy=3
+"></iframe>
+  </div>
+
 
 <div id="container">
 </div>
@@ -85,8 +98,7 @@ if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300 &&
 
 if (document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000) {
 				document.getElementById("replace-layer").style.opacity= 1; 
-        document.getElementById("replace-layer").style.height= 100+ "%"; 
-        timer();
+
 	}
   
 }, false);
@@ -123,27 +135,7 @@ var div = 0;
 
 
 
-function timer(){
-var div = 0;
-var count = 0;
-        setInterval(function() {
-            var count = div +1;
-            div = count;
-            console.log(count);
-            switch(count){
-            case 1:
-									document.getElementById("replace-layer").innerHTML="<h2>I cant feel my skin....</h2>";
-            break;
-						
-            case 2:
-							document.getElementById("replace-layer").innerHTML="<h2>WTF</h2>";
-            break;
 
-           
-                  
-            }
-        }, 1000);
-}
 </script>
 
 <style>
@@ -267,7 +259,7 @@ color: red;
 #replace-layer{
   background-color: rgba(000, 000, 000);
   top: 0;
-  height: 0px;
+  height: 100%;
   opacity: 0;
   z-index: 200;
   position: absolute;
@@ -275,9 +267,17 @@ color: red;
   color: white;
   position: fixed;
   
+  
 }
 #error img{
   height: 150px;
   
 }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      user-select: none;
+    }
 </style>
