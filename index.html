@@ -16,6 +16,9 @@
 &amp;disablekb=1
 &amp;enablejsapi=1
 &amp;iv_load_policy=3
+
+  
+
 "></iframe>
   </div>
 
@@ -137,7 +140,72 @@ var div = 0;
 
 
 </script>
+<script>
 
+function toggleImage() {
+ var img1 = "helovesit.png";
+ var img2 = "hedoesntloveit.png";
+   var imgElement = document.getElementById('lovingit');
+
+   if(imgElement.src ==img1){
+	   imgElement.src=img2;
+}else{
+imgElement.src=img1;
+   }
+}
+
+var text = document.getElementById("text");
+
+window.addEventListener("scroll", function () {
+
+if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300 && document.body.scrollTop < 1000) {
+
+    myFunc();
+   }
+
+if (document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000) {
+				document.getElementById("replace-layer").style.opacity= 1; 
+        document.getElementById("replace-layer").style.width= "110%"; 
+        document.getElementById("replace-layer").style.height= "110%"; 
+
+	}
+  
+}, false);
+
+
+function myFunc() {
+    var offset= window.pageYOffset-300;
+    
+    if (document.getElementById("text").style.opacity < 1 && document.getElementById("container").style.opacity < 1){
+    
+    	document.getElementById("text").style.opacity= offset/1000; 
+    	document.getElementById("container").style.opacity= 1-offset/1000; 
+     
+}
+}
+
+
+function hide() {
+var div = 0;
+
+	interval= setInterval(function() {
+
+		document.getElementById("error").style.display="none";
+		var count = div +1;
+		div = count;
+	if (count==20){
+		document.getElementById("error").style.display="block";
+    clearInterval(interval);
+
+
+		}
+	}, 50);
+}
+
+
+
+
+</script>
 <style>
 body {
   background-image: url("skinbg.jpg");
@@ -259,7 +327,8 @@ color: red;
 #replace-layer{
   background-color: rgba(000, 000, 000);
   top: 0;
-  height: 100%;
+  height: 0px;
+  width: 0px;
   opacity: 0;
   z-index: 200;
   position: absolute;
