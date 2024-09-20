@@ -26,6 +26,16 @@
 <div id="container">
 </div>
 
+<audio controls loop id="audiotrue">
+  <source src="skin.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+
+<audio controls loop id="audiofalse">
+  <source src="skin2.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+
 <div id="container2">
 <img src="lovingit.webp" title="help me" alt="help me" style="width: 300px; transform: rotate(180deg); " onclick="toggleImage();"/>
 
@@ -133,9 +143,12 @@ var div = 0;
 	if (count==20){
 		if (window.confirm("Accept cookies? (warning accepting cookies will NOT give us legal access to your skin)")==true){
       document.getElementById("bubble").innerHTML="THIS WEBISTE WILL TAKE YOUR SKINTHIS WEBISTE WILL TAKE YOUR SKINTHIS WEBISTE WILL TAKE YOUR SKINTHIS WEBISTE WILL TAKE YOUR SKIN"
-      
+              var audio = document.getElementById("audiotrue");
+        audio.play();
             document.getElementById("text2").innerHTML="WE WANT YOUR SKIN"
 		}else {
+			        var audio = document.getElementById("audiofalse");
+        audio.play();
         alert("Doesn't matter. Your skin is ours anyway.");
         }
 		document.getElementById("error").style.display="block";
