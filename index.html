@@ -76,77 +76,7 @@ ignore the URL
 </div>
 
 
-<script>
 
-function toggleImage() {
- var img1 = "helovesit.png";
- var img2 = "hedoesntloveit.png";
-   var imgElement = document.getElementById('lovingit');
-
-   if(imgElement.src ==img1){
-	   imgElement.src=img2;
-}else{
-imgElement.src=img1;
-   }
-}
-
-var text = document.getElementById("text");
-
-window.addEventListener("scroll", function () {
-
-if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300 && document.body.scrollTop < 1000) {
-
-    myFunc();
-   }
-
-if (document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000) {
-				document.getElementById("replace-layer").style.opacity= 1; 
-
-	}
-  
-}, false);
-
-
-function myFunc() {
-    var offset= window.pageYOffset-300;
-    
-    if (document.getElementById("text").style.opacity < 1 && document.getElementById("container").style.opacity < 1){
-    
-    	document.getElementById("text").style.opacity= offset/1000; 
-    	document.getElementById("container").style.opacity= 1-offset/1000; 
-     
-}
-}
-
-
-function hide() {
-var div = 0;
-
-	interval= setInterval(function() {
-
-		document.getElementById("error").style.display="none";
-		var count = div +1;
-		div = count;
-	if (count==20){
-		if (window.confirm("Accept cookies? (warning accepting cookies will NOT give us legal access to your skin)")==true){
-      document.getElementById("bubble").innerHTML="THIS WEBISTE WILL TAKE YOUR SKINTHIS WEBISTE WILL TAKE YOUR SKINTHIS WEBISTE WILL TAKE YOUR SKINTHIS WEBISTE WILL TAKE YOUR SKIN"
-      
-            document.getElementById("text2").innerHTML="WE WANT YOUR SKIN"
-		}else {
-        alert("Doesn't matter. Your skin is ours anyway.");
-        }
-		document.getElementById("error").style.display="block";
-    clearInterval(interval);
-
-
-		}
-	}, 50);
-}
-
-
-
-
-</script>
 <script>
 
 function toggleImage() {
@@ -201,6 +131,13 @@ var div = 0;
 		var count = div +1;
 		div = count;
 	if (count==20){
+		if (window.confirm("Accept cookies? (warning accepting cookies will NOT give us legal access to your skin)")==true){
+      document.getElementById("bubble").innerHTML="THIS WEBISTE WILL TAKE YOUR SKINTHIS WEBISTE WILL TAKE YOUR SKINTHIS WEBISTE WILL TAKE YOUR SKINTHIS WEBISTE WILL TAKE YOUR SKIN"
+      
+            document.getElementById("text2").innerHTML="WE WANT YOUR SKIN"
+		}else {
+        alert("Doesn't matter. Your skin is ours anyway.");
+        }
 		document.getElementById("error").style.display="block";
     clearInterval(interval);
 
