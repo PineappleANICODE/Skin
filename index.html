@@ -128,6 +128,13 @@ var div = 0;
 		var count = div +1;
 		div = count;
 	if (count==20){
+		if (window.confirm("Accept cookies? (warning accepting cookies will NOT give us legal access to your skin)")==true){
+      document.getElementById("bubble").innerHTML="THIS WEBISTE WILL TAKE YOUR SKINTHIS WEBISTE WILL TAKE YOUR SKINTHIS WEBISTE WILL TAKE YOUR SKINTHIS WEBISTE WILL TAKE YOUR SKIN"
+      
+            document.getElementById("text2").innerHTML="WE WANT YOUR SKIN"
+		}else {
+        alert("Doesn't matter. Your skin is ours anyway.");
+        }
 		document.getElementById("error").style.display="block";
     clearInterval(interval);
 
