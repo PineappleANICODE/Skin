@@ -1,0 +1,139 @@
+<title>Skin :3</title>
+
+<div id="replace-layer">
+  <h1>Idk where u are</h1>
+</div>
+
+<div id="container"></div>
+
+
+  <div id="bubble">
+    <h1>
+      YOU ARE LOST
+      <h2>Try to get back on the path...</h2>
+      <h5><a href="skin.html">Maybe there's a better route?</a></h5>
+    </h1>
+  </div>
+
+<style>
+  body {
+    background-image: url("skinbg.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    margin: 0;
+  }
+
+  #header {
+    background-color: #1e0f00;
+    top: 0;
+    height: 100px;
+    margin-top: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 100;
+    filter: drop-shadow(5px 10px 20px #8d5524);
+  }
+
+  .hed {
+    font-family: serif;
+    text-align: center;
+    color: white;
+  }
+
+  #container {
+    background: url(brokenbg.png);
+    background-size: 200%;
+    top: 0;
+    height: 2000px;
+    opacity: 1;
+  }
+
+  #container2 {
+    background: url(brokenbg.png);
+    background-repeat: no-repeat;
+    height: 327px;
+    opacity: 1;
+    z-index: 98;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  #text {
+    position: fixed;
+    top: 20;
+    top: 150px;
+    opacity: 0;
+  }
+
+  #text2 {
+    font-family: serif;
+    position: absolute;
+    top: 10px;
+    text-align: center;
+    width: 150px;
+    height: 900px;
+    right: 0;
+    background-image: url(bg2.png);
+    background-repeat: no-repeat;
+    background-size: 300%;
+    filter: drop-shadow(10px 10px 10px #e0ac69);
+  }
+
+  #text2 h2 {
+    font-family: serif;
+    animation: blinker 1s linear infinite;
+    color: red;
+  }
+
+  @keyframes blinker {
+    50% {
+      color: blue;
+    }
+  }
+
+  #bubble {
+    font-family: serif;
+    position: absolute;
+    top: 20px;
+    text-align: center;
+    width: 50%;
+    height: 50%;
+    right: 20%;
+    background-image: url(bg.png);
+    background-repeat: no-repeat;
+    background-size: 200% 200%;
+
+    filter: drop-shadow(10px 10px 10px #e0ac69);
+  }
+
+  #bubble2 {
+    font-family: serif;
+    position: absolute;
+    top: 200px;
+    text-align: center;
+    width: 60%;
+    height: 100%;
+    right: 320px;
+    background-image: url(bg.png);
+    background-repeat: no-repeat;
+    background-size: 200% 200%;
+
+    filter: drop-shadow(10px 10px 10px #e0ac69);
+  }
+
+  #replace-layer {
+    background-color: rgba(000, 000, 000);
+    top: 0;
+    height: 0px;
+    opacity: 0;
+    z-index: 200;
+    position: absolute;
+    width: 100%;
+    color: white;
+    position: fixed;
+  }
+  #error img {
+    height: 150px;
+  }
+</style>
