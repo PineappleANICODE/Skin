@@ -95,7 +95,7 @@ I think you should definitley scroll down....
 
 
 <script>
-
+alert("update working");
 function toggleImage() {
  var img1 = "helovesit.png";
  var img2 = "hedoesntloveit.png";
@@ -172,6 +172,7 @@ var div = 0;
 const portrait = window.matchMedia("(orientation: portrait)").matches;
 if (portrait){
 document.getElementById("overlay").style.display="block";
+alert("Rotate ur device plz!");
 }
 else{
 document.getElementById("overlay").style.display="hidden";
@@ -181,6 +182,7 @@ window.matchMedia("(orientation: portrait)").addEventListener("change", e => {
 
     if (portrait) {
 document.getElementById("overlay").style.display="block";
+	    alert("Rotate ur device plz!");
     } else {
       document.getElementById("overlay").style.display="hidden";
     }
