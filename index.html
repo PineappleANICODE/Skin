@@ -167,6 +167,25 @@ var div = 0;
 
 
 
+//checking if portrait mode
+const portrait = window.matchMedia("(orientation: portrait)").matches;
+if (portrait){
+document.getElementById("overlay").style.display="block";
+}
+else{
+document.getElementById("overlay").style.display="hidden";
+}
+window.matchMedia("(orientation: portrait)").addEventListener("change", e => {
+    const portrait = e.matches;
+
+    if (portrait) {
+document.getElementById("overlay").style.display="block";
+    } else {
+      document.getElementById("overlay").style.display="hidden";
+    }
+});
+
+
 
 </script>
 <style>
@@ -327,4 +346,17 @@ color: red;
       pointer-events: none;
       user-select: none;
     }
+
+#overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 200;
+  cursor: pointer;
+}
 </style>
