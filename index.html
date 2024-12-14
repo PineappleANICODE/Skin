@@ -121,8 +121,11 @@ if (document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000)
 				document.getElementById("replace-layer").style.opacity= 1; 
         document.getElementById("replace-layer").style.width= "110%"; 
         document.getElementById("replace-layer").style.height= "110%"; 
-				document.onclick = function(){ window.location.href = "https://www.iwantyour.skin/skins/collection.html";};
+
 	}
+  document.getElementById('replace-layer').onclick = function() {
+   window.location.href = "https://www.iwantyour.skin/skins/collection.html";
+};
   
 }, false);
 
