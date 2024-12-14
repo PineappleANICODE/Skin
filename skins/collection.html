@@ -1,0 +1,15 @@
+<img id = "img" src="1.jpg" width = 100%; hight = 100%>
+
+<script>
+    function getRandomInt(max) { // number between 1 & max
+      return ( Math.floor(Math.random() * Math.floor(max)) )+1;
+    }
+    
+const interval = setInterval(function() {
+    let img = document.getElementById("img");
+    src =getRandomInt(100) +".jpg";
+    img.src = src;
+    console.log(src);
+ }, 1000);
+
+</script>
