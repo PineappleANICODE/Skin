@@ -176,11 +176,11 @@ window.matchMedia("(orientation: portrait)").addEventListener("change", e => {
     const portrait = e.matches;
 
     if (portrait) {
-			document.getElementById("overlay").style.display="block";
+	    document.getElementById("overlay").style.display="block";
 	    alert("Rotate ur device plz!");
- 			document.getElementById("change").style.left="700px;"
+ 	    document.getElementById("change").style.display="hidden;"
     } else {
-      document.getElementById("overlay").style.display="none";
+      	    document.getElementById("overlay").style.display="none";
 
 alert("thanks uwu");
     }
