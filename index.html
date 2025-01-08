@@ -18,6 +18,9 @@ Please rotate your device <img src = "https://iwantyour.skin/skin3.jpeg" style =
 &amp;disablekb=1
 &amp;enablejsapi=1
 &amp;iv_load_policy=3
+
+  
+
 "></iframe>
   </div>
 
@@ -78,9 +81,9 @@ I think you should definitley scroll down....
 <img src="helovesit.png" style="  position: absolute; height: 150px; top:200px; left: 200px;" id="lovingit" onclick="toggleImage();"/>
 
 <div id="error">
-<img src="error.png" id = "change" style="  position: absolute; height: 150px; top:400px; left: 1000px;" onclick="hide();"/>
+<img src="error.png" id = "changes" style="  position: absolute; height: 150px; top:400px; left: 1000px;" onclick="hide();"/>
 <img src="error.png" style="  position: absolute; height: 150px; top:600px; left: 700px;" onclick="hide();"/>
-<img src="error.png" style="  position: relative; height: 150px; top:400px; left: 200px;" onclick="hide();"/>
+<img src="error.png" style="  position: absolute; height: 150px; top:400px; left: 200px;" onclick="hide();"/>
 </div>
 </div>
 
@@ -168,20 +171,16 @@ var div = 0;
 
 
 
-//checking if portrait mode
-const portrait = window.matchMedia("(orientation: portrait)").matches;
-
 
 window.matchMedia("(orientation: portrait)").addEventListener("change", e => {
     const portrait = e.matches;
 
     if (portrait) {
-	    document.getElementById("overlay").style.display="block";
+document.getElementById("overlay").style.display="block";
 	    alert("Rotate ur device plz!");
- 	    document.getElementById("change").style.display="hidden;"
+     document.getElementById("changes").style.display="none";
     } else {
-      	    document.getElementById("overlay").style.display="none";
-
+      document.getElementById("overlay").style.display="none";
 alert("thanks uwu");
     }
 });
